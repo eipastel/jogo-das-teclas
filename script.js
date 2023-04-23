@@ -26,7 +26,7 @@ const inputUsuario = []
 let estaIniciado = false;
 let atualPosicaoDigitando = 0;
 let tempoAtual = 0;
-let barrraAtual = 100;
+let barraAtual = 100;
 
 // Eu imagino que seja para limpar o intervalo
 let limpaIntervalo = null;
@@ -34,7 +34,7 @@ let limpaIntervalo = null;
 // Função responsável pela barra de progresso
 function tempoBarraProgresso() {
     limpaIntervalo = setInterval(() => {
-        if (barrraAtual < 0) {
+        if (barraAtual < 0) {
             clearInterval(limpaIntervalo)
             resultadoNegativo.style.display = 'flex';
             containerDesafio.style.display = 'none';
@@ -54,20 +54,20 @@ function tempoBarraProgresso() {
         }
         
         // Mudar a cor da barra quando fica entre 30% e 60%
-        if (barrraAtual > 30 && barrraAtual < 60) {
+        if (barraAtual > 30 && barraAtual < 60) {
             barraProgresso.style.backgroundColor = '#F58002'
         }
 
         // Mudar a cor da barra quando fica abaixo de 30%
-        if (barrraAtual <= 30) {
+        if (barraAtual <= 30) {
             barraProgresso.style.backgroundColor = '#FF3E24'
         }
 
         // Fazer a barra descer
-        barrraAtual = barrraAtual - 1;
+        barraAtual = barraAtual - 1;
         
         // Diminuir visualmente o tamanho da barra
-        barraProgresso.style.width = `${barrraAtual}%`
+        barraProgresso.style.width = `${barraAtual}%`
     }, 53)
 }
 
@@ -123,7 +123,7 @@ function iniciarPararJogo() {
 function reiniciarJogo() {
     barraProgresso.style.backgroundColor = '#a3ef52'
     barraProgresso.style.width = '100%'
-    barrraAtual = 100
+    barraAtual = 100
     atualPosicaoDigitando = 0
     clearInterval(limpaIntervalo)
     letrasGeradas.forEach(e => e.classList.remove('tecla_atual'))
