@@ -42,8 +42,8 @@ function tempoBarraProgresso() {
             botaoDeInicio.classList = 'botao_de_inicio';
             botaoDeInicio.textContent = 'Começar';
 
-            atualSequencia = 0 // Esvaziar a array que dita sequência
-            inputUsuario = 0 // Esvaziar array que dita qual a tecla atual que o usuario está digitando
+            atualSequencia.length = 0 // Esvaziar a array que dita sequência
+            inputUsuario.length = 0 // Esvaziar array que dita qual a tecla atual que o usuario está digitando
             reiniciarJogo()
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
 
@@ -104,11 +104,9 @@ function iniciarPararJogo() {
         letrasGeradas.forEach((key, index) => {
             key.textContent = atualSequencia[index]
         })
-    }
-
-    else {
+    } else {
         atualSequencia.length = 0 // Esvaziar a sequência atual
-        inputUsuario.length = 0 // Esvaziando o que define qual a posição que o usuário digita
+        inputUsuario.length = 0 // Esvaziando o input do usuário
         reiniciarJogo()
         letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
 
@@ -116,14 +114,15 @@ function iniciarPararJogo() {
         letrasGeradas.forEach((key, index) => {
             key.textContent = ''
         })
-    }
+        }
 }
 
 // Função para reiniciar o jogo
 function reiniciarJogo() {
     barraProgresso.style.backgroundColor = '#a3ef52'
-    barraProgresso.style.width = '100%'
+    barraProgresso.style.width = '90%'
     barraAtual = 100
+    barraProgresso.width = '90%'
     atualPosicaoDigitando = 0
     clearInterval(limpaIntervalo)
     letrasGeradas.forEach(e => e.classList.remove('tecla_atual'))
@@ -133,7 +132,7 @@ function reiniciarJogo() {
 function eventoApertarTecla(event) {
     const inputLetra = event.key.toUpperCase()
 
-    if (estaIniciado && letras.includes(inputLetra) &&          inputUsuario.length < 10) {
+    if (estaIniciado && letras.includes(inputLetra) && inputUsuario.length < 10) {
         inputUsuario.push(inputLetra)
 
         letrasGeradas.forEach((e, i) => {
@@ -153,7 +152,7 @@ function eventoApertarTecla(event) {
                 resultadoPositivo.style.display = 'flex'
                 containerDesafio.style.display = 'none'
                 estaIniciado = false
-                botaoDeInicio.classList = 'botao_de_iniciar'
+                botaoDeInicio.classList = 'botao_de_inicio'
                 botaoDeInicio.textContent = 'Começar'
 
                 atualSequencia.length = 0 // Limpar array
