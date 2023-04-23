@@ -45,7 +45,7 @@ function tempoBarraProgresso() {
             // Limpa as teclas que estão mostrando
             letrasGeradas.forEach((key, index) => {
                 key.textContent = ''
-            }
+            })
         }
         
 
