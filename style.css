@@ -44,17 +44,6 @@ body {
     align-items: center;
 }
 
-.tentativas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #30231f;
-    font-weight: bold;
-    font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
 .barra_progresso {
     width: 90%;
     height: 0.9rem;
@@ -89,6 +78,17 @@ body {
     background-color: #30231f;
     border: 1px solid rgb(68, 68, 68);
     font-size: 2em;
+}
+
+.tentativas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #30231f;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 .botao_de_inicio {
