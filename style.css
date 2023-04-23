@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+html {
+    font-size: 88%;
+}
+
 body {
     background-image: url(imagens/imagem_de_fundo.jpg);
     display: flex;
@@ -46,7 +50,7 @@ body {
 
 .barra_progresso {
     width: 90%;
-    height: 0.9rem;
+    height: 0.7rem;
     overflow: hidden;
     background-color: #646464;
     border-radius: 2rem;
@@ -75,9 +79,21 @@ body {
     border-radius: 0.5rem;
     font-family: 'Montserrat', sans-serif;
     aspect-ratio: 1;
-    background-color: #30231f;
+    background-color: #a67e55;
     border: 1px solid rgb(68, 68, 68);
     font-size: 2em;
+}
+
+.tecla_atual {
+    position: relative;
+    border: #000000 3px solid;
+    bottom: 0.8rem;
+}
+
+.tecla_digitada {
+    background-color: #a67e55;
+    color: #30231f;
+ 
 }
 
 .tentativas {
@@ -108,6 +124,23 @@ body {
     background-color: #946a40;
 }
 
+.botao_de_parar {
+    width: 11.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-color: #b83131;
+}
+
+.botao_de_parar:hover {
+    background-color: #972424;
+}
+
 .resultado_negativo {
     display: none;
     font-family: 'Montserrat', sans-serif;
@@ -120,6 +153,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     font-size: 2.8rem;
+}
+
+.active {
+    box-shadow: rgb(41, 245, 0) 0px 20px 0px -10px;
 }
 
 .links {
