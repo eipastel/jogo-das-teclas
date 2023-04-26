@@ -9,7 +9,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina a seguinte f
 [Git](https://git-scm.com)
 ```
 # Clone este repositório
-$ git clone https://github.com/eipastel/jogo-das-teclas
+$ git clone https://github.com/eipastel/jogo-das-teclas.git
 
 # Execute o aquivo "index.html"
 ```
@@ -19,6 +19,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Vegas PRO](https://www.vegascreativesoftware.com/br/vegas-pro/)
+- [Photoshop](https://www.adobe.com/br/creativecloud/plans.html)
 
 <br>
 <p align="center">
