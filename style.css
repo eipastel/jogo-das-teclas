@@ -162,15 +162,37 @@ body {
 
 .links_gerais {
     display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 
-.links_pastel {
-    margin-top: 6rem;
-    display: flex;
-    gap: 0.5rem;
+a {
+    text-decoration: none;
+    color: #30231f;
 }
-.links_pulga {
-    margin-top: 6rem;
-    display: flex;
-    gap: 0.5rem;
+
+a:hover {
+    color: #30231faf;
+}
+
+.links_gerais img {
+    padding: 0.5rem;
+}
+
+.container_devs {
+    text-align: center;
+}
+
+.devs{
+    width: 11.5rem;
+    height: 100%;
+    background-color: #a67e55;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.devs h4 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
