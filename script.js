@@ -4,7 +4,7 @@ const botaoDeInicio = document.querySelector('button')
 const resultadoNegativo = document.querySelector('.resultado_negativo')
 const resultadoPositivo = document.querySelector('.resultado_positivo')
 const containerDesafio = document.querySelector('.container_desafio')
-const barraProgresso = document.querySelector('.barra_progresso')
+const barraProgresso = document.querySelector('.barra_atual')
 const tentativasTela = document.querySelector('.tentativa')
 
 // Efeitos sonoros e volumes.
@@ -124,8 +124,8 @@ function iniciarPararJogo() {
 // Função para reiniciar o jogo
 function reiniciarJogo() {
     barraProgresso.style.backgroundColor = '#a3ef52'
-    barraAtual = 90
-    barraProgresso.style.width = '90%'
+    barraAtual = 100
+    barraProgresso.style.width = '100%'
     atualPosicaoDigitando = 0
     clearInterval(limpaIntervalo)
     letrasGeradas.forEach(e => e.classList.remove('tecla_atual'))
