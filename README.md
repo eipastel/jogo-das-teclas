@@ -22,6 +22,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Vegas PRO](https://www.vegascreativesoftware.com/br/vegas-pro/)
 - [Photoshop](https://www.adobe.com/br/creativecloud/plans.html)
 
+<div align="center"> 
+<img src="https://user-images.githubusercontent.com/92560005/234455546-ef223645-2490-4590-a0b4-5d91c45feb1f.png" width="600"/>
+</div>
+<div align="center"> 
+<img src="https://user-images.githubusercontent.com/92560005/234457384-3735a11a-275d-47e8-96a0-9738ac0bbe79.png" width="600"/>
+</div>
+
 <br>
 <p align="center">
 <a target="_blank" href="https://www.linkedin.com/in/thiago-diogo-79857526a/">Thiago Diogo</a> • <a target="_blank" href="https://www.linkedin.com/in/emanuellyvalenga/">Emanuelly Valenga</a>
