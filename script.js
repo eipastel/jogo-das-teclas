@@ -116,6 +116,10 @@ function iniciarPararJogo() {
         letrasGeradas.forEach((key, index) => {
             key.textContent = ''
         })
+        tentativas = 1;
+        tentativasLimite = 5;
+        tentativasTela.textContent = `${tentativas}/${tentativasLimite}`
+
         }
     if (inputUsuario.length === 10 && tentativas == tentativasLimite) {
             estaIniciado = false
@@ -128,7 +132,7 @@ function iniciarPararJogo() {
             letrasGeradas.forEach((key, index) => {
                 key.textContent = ''
             })
-            tentativasTela.textContent = `${tentativas}/5`
+            tentativasTela.textContent = `${tentativas}/${tentativasLimite}`
             reiniciarJogo()
     }
 }
@@ -182,7 +186,7 @@ function eventoApertarTecla(event) {
                     key.textContent = atualSequencia[index]
                 })
                 tentativas++
-                tentativasTela.textContent = `${tentativas}/5`
+                tentativasTela.textContent = `${tentativas}/${tentativasLimite}`
             } else if (inputUsuario.length === 10) {
                 resultadoPositivo.style.display = 'flex'
                 containerDesafio.style.display = 'none'
