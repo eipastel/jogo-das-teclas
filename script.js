@@ -5,7 +5,7 @@ const resultadoNegativo = document.querySelector('.resultado_negativo')
 const resultadoPositivo = document.querySelector('.resultado_positivo')
 const containerDesafio = document.querySelector('.container_desafio')
 const barraProgresso = document.querySelector('.barra_atual')
-const tentativasTela = document.querySelector('.tentativa')
+const tentativasTela = document.querySelector('.tentativas')
 
 // Efeitos sonoros e volumes.
 const teclaErrada = new Audio('./sons/som_de_erro.mp3')
@@ -98,7 +98,6 @@ function iniciarPararJogo() {
         resultadoNegativo.style.display = 'none'
         resultadoPositivo.style.display = 'none'
         containerDesafio.style.display = 'grid'
-        
         atualSequencia.push(...pegarSequencia())
         reiniciarJogo()
         tempoBarraProgresso()
@@ -168,15 +167,28 @@ function eventoApertarTecla(event) {
                     key.textContent = atualSequencia[index]
                 })
                 tentativas++
-            }   
-            if (inputUsuario.length === 10 & tentativas        ===        tentativasLimite) {
+                tentativasTela.textContent = `${tentativas}/5`
+            } else if (inputUsuario.length === 10 & tentativas === tentativasLimite) {
                 resultadoPositivo.style.display = 'flex'
                 containerDesafio.style.display = 'none'
                 reiniciarJogo()
                 botaoDeInicio.classList = 'botao_de_inicio'
                 botaoDeInicio.textContent = 'Começar'
+            }  
+        } else {
+            teclaErrada.play()
+            atualPosicaoDigitando = 0
+            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+            letrasGeradas.forEach(key => key.classList.remove('tecla_atual'))
+            letrasGeradas[0].classList.add('tecla_atual')
+            inputUsuario.length = 0
+            atualSequencia.length = 0
+
+            atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
+            letrasGeradas.forEach((key, index) => {
+                key.textContent = atualSequencia[index]
+            })
             }
-        } 
     } else {
         if (estaIniciado) {
             teclaErrada.play()

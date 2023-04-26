@@ -1,8 +1,7 @@
 Problemas à solucionar:
 
 
-1- Quando digita a letra errada, ele passa pra próxima letra e o jogo buga
-2- As tentativas não estão atualizando a cada tentativa
+1- As tentativas não resetam quando a gente erra ou quando a gente clica em parar.
 
 * Arrumar a cor da barra de tarefas
 * Arrumar os áudio de quando digita a letra(só recortar o áudio para ficar sincronizado)

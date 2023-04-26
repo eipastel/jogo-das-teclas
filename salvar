@@ -1,0 +1,76 @@
+function eventoApertarTecla(event) {
+    const inputLetra = event.key.toUpperCase()
+
+    if (estaIniciado && letras.includes(inputLetra) && inputUsuario.length < 10) {
+        inputUsuario.push(inputLetra)
+
+        letrasGeradas.forEach((e, i) => {
+            if (i - 1 === atualPosicaoDigitando) {
+                e.classList.add('tecla_atual')
+            } else {
+                e.classList.remove('tecla_atual')
+            }
+        })
+
+        if (inputUsuario.every((e, i) => e === atualSequencia[i])) {
+            teclaPressionada.play()
+            letrasGeradas[atualPosicaoDigitando].classList.add('tecla_digitada')
+            atualPosicaoDigitando++
+            if(inputUsuario.length === 10) {
+                clearInterval(limpaIntervalo)
+                //resultadoPositivo.style.display = 'flex'
+                //containerDesafio.style.display = 'none'
+                estaIniciado = true
+                botaoDeInicio.classList = 'botao_de_inicio'
+                botaoDeInicio.textContent = 'Começar'
+
+                // Testes
+                atualPosicaoDigitando = 0
+                letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+                inputUsuario.length = 0
+                atualSequencia.length = 0
+
+                atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
+                letrasGeradas.forEach((key, index) => {
+                    key.textContent = atualSequencia[index]
+                })
+
+                atualSequencia.length = 0 // Limpar array
+                inputUsuario.length = 0 // Limpar Array
+                reiniciarJogo()
+                letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+
+                // Limpando a tecla
+                letrasGeradas.forEach((key, index) => {
+                    key.textContent = ''
+                })
+            }
+        } else {
+            teclaErrada.play()
+            atualPosicaoDigitando = 0
+            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+            letrasGeradas.forEach(key => key.classList.remove('tecla_atual'))
+            letrasGeradas[0].classList.add('tecla_atual')
+            inputUsuario.length = 0
+            atualSequencia.length = 0
+
+            atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
+            letrasGeradas.forEach((key, index) => {
+                key.textContent = atualSequencia[index]
+            })
+        }
+    } else {
+        if (estaIniciado) {
+            teclaErrada.play()
+            atualPosicaoDigitando = 0
+            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+            inputUsuario.length = 0
+            atualSequencia.length = 0
+
+            atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
+            letrasGeradas.forEach((key, index) => {
+                key.textContent = atualSequencia[index]
+            })
+        }
+    }
+}
