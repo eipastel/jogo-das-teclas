@@ -54,6 +54,7 @@ function tempoBarraProgresso() {
             letrasGeradas.forEach((key, index) => {
                 key.textContent = ''
             })
+            tentativas = 1;
         }
         
         // Mudar a cor da barra quando fica entre 30% e 60%
@@ -109,8 +110,9 @@ function iniciarPararJogo() {
         })
     } else {
         atualSequencia.length = 0 // Esvaziar a sequência atual
-        inputUsuario.length = 0 // Esvaziando o input do usuário
+        inputUsuario.length = 0 // Esvaziar o input do usuário
         reiniciarJogo()
+        
         letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
 
         // Tirar as letras que estão mostrando
@@ -171,6 +173,10 @@ function eventoApertarTecla(event) {
             } else if (inputUsuario.length === 10 & tentativas === tentativasLimite) {
                 resultadoPositivo.style.display = 'flex'
                 containerDesafio.style.display = 'none'
+                letrasGeradas.forEach((key, index) => {
+                    key.textContent = ''
+                })
+                letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
                 reiniciarJogo()
                 botaoDeInicio.classList = 'botao_de_inicio'
                 botaoDeInicio.textContent = 'Começar'
@@ -183,7 +189,7 @@ function eventoApertarTecla(event) {
             letrasGeradas[0].classList.add('tecla_atual')
             inputUsuario.length = 0
             atualSequencia.length = 0
-
+            
             atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
             letrasGeradas.forEach((key, index) => {
                 key.textContent = atualSequencia[index]
@@ -194,7 +200,7 @@ function eventoApertarTecla(event) {
             teclaErrada.play()
             atualPosicaoDigitando = 0
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
-            reiniciarJogo
+            reiniciarJogo()
             inputUsuario.length = 0
             atualSequencia.length = 0
             currentSequence.length = 0

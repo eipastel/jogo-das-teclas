@@ -2,6 +2,7 @@ Problemas à solucionar:
 
 
 1- As tentativas não resetam quando a gente erra ou quando a gente clica em parar.
+2- Quando você ganha, ao clicar no Confirmar, não acontece nada, só acontece na segunda vez que clica em confirmar
 
 * Arrumar a cor da barra de tarefas
 * Arrumar os áudio de quando digita a letra(só recortar o áudio para ficar sincronizado)
