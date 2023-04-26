@@ -117,6 +117,20 @@ function iniciarPararJogo() {
             key.textContent = ''
         })
         }
+    if (inputUsuario.length === 10 && tentativas == tentativasLimite) {
+            estaIniciado = false
+            botaoDeInicio.classList = 'botao_de_inicio';
+            botaoDeInicio.textContent = 'Começar';
+            barraAtual = 100
+            atualSequencia.length = 0
+            inputUsuario.length = 0
+            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+            letrasGeradas.forEach((key, index) => {
+                key.textContent = ''
+            })
+            tentativasTela.textContent = `${tentativas}/5`
+            reiniciarJogo()
+    }
 }
 
 // Função para reiniciar o jogo
