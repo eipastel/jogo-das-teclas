@@ -65,7 +65,7 @@ function tempoBarraProgresso() {
         }
 
         // Fazer a barra descer
-        barraAtual = barraAtual - 0.3;
+        barraAtual = barraAtual - 1;
         
         // Diminuir visualmente o tamanho da barra
         barraProgresso.style.width = `${barraAtual}%`
