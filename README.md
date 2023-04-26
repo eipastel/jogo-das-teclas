@@ -9,7 +9,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina a seguinte f
 [Git](https://git-scm.com)
 ```
 # Clone este repositório
-$ git clone https://github.com/eipastel/jogo-das-teclas
+$ git clone https://github.com/eipastel/jogo-das-teclas.git
 
 # Execute o aquivo "index.html"
 ```
