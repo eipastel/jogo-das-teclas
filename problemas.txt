@@ -4,3 +4,4 @@ Problemas à solucionar:
 1- As tentativas não resetam quando a gente erra ou quando a gente clica em parar.
 2- Quando você ganha, ao clicar no Confirmar, não acontece nada, só acontece na segunda vez que clica em confirmar
 3- Quando pressiona uma tecla que não seja as padrões: [Q, W, E, A, S, D] o jogo buga.
+4- Quando o tempo zera a barra de progresso volta um pouquinho a menos
