@@ -17,6 +17,7 @@ teclaPressionada.volume = 0.5
 window.addEventListener('keydown', eventoApertarTecla)
 botaoDeInicio.addEventListener('click', iniciarPararJogo)
 
+
 // Tempo e sequência do desafio e do usuário
 const tempoDesafio = 6 // Está em segundos.
 const letras = ['Q', 'W', 'E', 'A', 'S', 'D']
@@ -38,23 +39,18 @@ let limpaIntervalo = null;
 function tempoBarraProgresso() {
     limpaIntervalo = setInterval(() => {
         if (barraAtual < 0) {
-            clearInterval(limpaIntervalo)
-            resultadoNegativo.style.display = 'flex';
-            containerDesafio.style.display = 'none';
+            tentativas = 1
             estaIniciado = false
             botaoDeInicio.classList = 'botao_de_inicio';
             botaoDeInicio.textContent = 'Começar';
-
-            atualSequencia.length = 0 // Esvaziar a array que dita sequência
-            inputUsuario.length = 0 // Esvaziar array que dita qual a tecla atual que o usuario está digitando
-            reiniciarJogo()
+            barraAtual = 100
+            atualSequencia.length = 0
+            inputUsuario.length = 0
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
-
-            // Limpa as teclas que estão mostrando
             letrasGeradas.forEach((key, index) => {
                 key.textContent = ''
             })
-            tentativas = 1;
+            reiniciarJogo()
         }
         
         // Mudar a cor da barra quando fica entre 30% e 60%
@@ -149,6 +145,7 @@ function eventoApertarTecla(event) {
         })
 
         if (inputUsuario.every((e, i) => e === atualSequencia[i])) {
+            teclaPressionada.currentTime = 0;
             teclaPressionada.play()
             letrasGeradas[atualPosicaoDigitando].classList.add('tecla_digitada')
             atualPosicaoDigitando++
@@ -170,7 +167,7 @@ function eventoApertarTecla(event) {
                 })
                 tentativas++
                 tentativasTela.textContent = `${tentativas}/5`
-            } else if (inputUsuario.length === 10 & tentativas === tentativasLimite) {
+            } else if (inputUsuario.length === 10 && tentativas == tentativasLimite) {
                 resultadoPositivo.style.display = 'flex'
                 containerDesafio.style.display = 'none'
                 letrasGeradas.forEach((key, index) => {
@@ -178,10 +175,12 @@ function eventoApertarTecla(event) {
                 })
                 letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
                 reiniciarJogo()
+                tentativas = 1;
                 botaoDeInicio.classList = 'botao_de_inicio'
                 botaoDeInicio.textContent = 'Começar'
             }  
         } else {
+            teclaErrada.currentTime = 0;
             teclaErrada.play()
             atualPosicaoDigitando = 0
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
@@ -197,6 +196,7 @@ function eventoApertarTecla(event) {
             }
     } else {
         if (estaIniciado) {
+            teclaErrada.currentTime = 0;
             teclaErrada.play()
             atualPosicaoDigitando = 0
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))

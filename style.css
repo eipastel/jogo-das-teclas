@@ -59,7 +59,7 @@ body {
 .barra_atual {
     width: 100%;
     height: 100%;
-    background-color: #48d848;
+    background-color: #38ff38;
     transition: background-color 1s;
 }
 
@@ -82,18 +82,19 @@ body {
     background-color: #a67e55;
     border: 1px solid rgb(68, 68, 68);
     font-size: 2em;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
 .tecla_atual {
     position: relative;
-    border: #000000 3px solid;
+    border: #271d14 3px solid;
     bottom: 0.8rem;
 }
 
 .tecla_digitada {
-    background-color: #58432d;
+    background-color: #6e5439;
     color: #30231f;
- 
+    opacity: 0.3;
 }
 
 .tentativas {
