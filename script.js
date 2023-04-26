@@ -22,6 +22,8 @@ const tempoDesafio = 6 // Está em segundos.
 const letras = ['Q', 'W', 'E', 'A', 'S', 'D']
 const atualSequencia = []
 const inputUsuario = []
+let tentativas = 1;
+let tentativasLimite = 5;
 
 // Variáveis relacionadas ao começo do jogo e o momento dele
 let estaIniciado = false;
@@ -129,8 +131,7 @@ function reiniciarJogo() {
     letrasGeradas.forEach(e => e.classList.remove('tecla_atual'))
 }
 
-let tentativas = 1;
-let tentativasLimite = 5;
+
 // Função responsável por apertar a tecla
 function eventoApertarTecla(event) {
     const inputLetra = event.key.toUpperCase()
@@ -167,29 +168,25 @@ function eventoApertarTecla(event) {
                     key.textContent = atualSequencia[index]
                 })
                 tentativas++
+            }   
+            if (inputUsuario.length === 10 & tentativas        ===        tentativasLimite) {
+                resultadoPositivo.style.display = 'flex'
+                containerDesafio.style.display = 'none'
+                reiniciarJogo()
+                botaoDeInicio.classList = 'botao_de_inicio'
+                botaoDeInicio.textContent = 'Começar'
             }
-        } if (inputUsuario.length === 10 && tentativas === tentativasLimite) {
-            teclaErrada.play()
-            atualPosicaoDigitando = 0
-            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
-            letrasGeradas.forEach(key => key.classList.remove('tecla_atual'))
-            letrasGeradas[0].classList.add('tecla_atual')
-            inputUsuario.length = 0
-            atualSequencia.length = 0
-
-            atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
-            letrasGeradas.forEach((key, index) => {
-                key.textContent = atualSequencia[index]
-            })
-        }
+        } 
     } else {
         if (estaIniciado) {
             teclaErrada.play()
             atualPosicaoDigitando = 0
             letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+            reiniciarJogo
             inputUsuario.length = 0
             atualSequencia.length = 0
-
+            currentSequence.length = 0
+            userInput.length = 0
             atualSequencia.push(...pegarSequencia()) // Pegar uma nova sequência
             letrasGeradas.forEach((key, index) => {
                 key.textContent = atualSequencia[index]
