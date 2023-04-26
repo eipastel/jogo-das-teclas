@@ -1,0 +1,19 @@
+if (barraAtual < 0) {
+            clearInterval(limpaIntervalo)
+            resultadoNegativo.style.display = 'none';
+            containerDesafio.style.display = 'flex';
+            estaIniciado = true
+            botaoDeInicio.classList = 'botao_de_inicio';
+            botaoDeInicio.textContent = 'Começar';
+
+            atualSequencia.length = 0 // Esvaziar a array que dita sequência
+            inputUsuario.length = 0 // Esvaziar array que dita qual a tecla atual que o usuario está digitando
+            reiniciarJogo()
+            letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
+
+            // Limpa as teclas que estão mostrando
+            letrasGeradas.forEach((key, index) => {
+                key.textContent = ''
+            })
+            tentativas = 1;
+        }
