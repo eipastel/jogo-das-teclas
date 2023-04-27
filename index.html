@@ -11,10 +11,16 @@
 
 <body>
 
+    <div class="video_background">
+        <video autoplay loop muted>
+            <source src="./imagens/video_fundo.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="container_desafio">
-        <div class="titulo">Digite as letras na sequência correta</div>
+        <div class="titulo">💣 Digite a sequência correta do código</div>
         <div class="container_jogo">
 
+            <div class="tentativas">1/5</div>
             <div class="barra_progresso">
                  <div class="barra_atual"></div>
             </div>
@@ -31,8 +37,6 @@
                 <div class="tecla"></div>
                 <div class="tecla"></div>
             </div>
-
-            <div class="tentativas">1/5</div>
 
         </div>
     </div>
@@ -77,6 +81,7 @@
             </h4>
         </div>
     </div>
+    
     <script src="./script.js"></script>
 
 </body>
