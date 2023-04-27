@@ -7,12 +7,15 @@
 ### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta:
 [Git](https://git-scm.com)
+
 ```
 # Clone este repositório
 $ git clone https://github.com/eipastel/jogo-das-teclas.git
 
 # Execute o aquivo "index.html"
 ```
+
+### O jogo está em constante alteração, possíveis bug poderão ser alertados para nós!
 
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
