@@ -23,10 +23,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Photoshop](https://www.adobe.com/br/creativecloud/plans.html)
 
 <div align="center"> 
-<img src="https://user-images.githubusercontent.com/92560005/234455546-ef223645-2490-4590-a0b4-5d91c45feb1f.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/92560005/234739952-5cef24f8-d19a-4fd6-ab5c-24a8592dd342.png" width="600"/>
 </div>
 <div align="center"> 
-<img src="https://user-images.githubusercontent.com/92560005/234457384-3735a11a-275d-47e8-96a0-9738ac0bbe79.png" width="600"/>
+<img src="https://user-images.githubusercontent.com/92560005/234740020-5ca0a6d6-ce39-4b55-9a87-7df626010398.png" width="600"/>
 </div>
 
 <br>
