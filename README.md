@@ -4,15 +4,21 @@
 
 ### 🎲 Abrindo o Jogo
 
+[Para jogar é só clicar aqui!](https://eipastel.github.io/jogo-das-teclas/)
+
+
+
+### 🎲 Baixando o Jogo
+
 ### Pré-requisitos
-Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta:
+Antes de baixar, você precisa ter instalado seguinte ferramenta em sua máquina:
 [Git](https://git-scm.com)
 
 ```
 # Clone este repositório
 $ git clone https://github.com/eipastel/jogo-das-teclas.git
 
-# Execute o aquivo "index.html"
+# Pronto, está no seu computador todos os arquivos do projeto!
 ```
 
 ### O jogo está em constante alteração, possíveis bug poderão ser alertados para nós!
