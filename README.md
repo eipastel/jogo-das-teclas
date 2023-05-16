@@ -1,35 +1,37 @@
 # Jogo das Letras #
 
-<p>O jogo consiste em você acertar uma série de letras, sendo elas: Q, W, E, A, S D. que vão aparecer aleatoriamente dentro de quadrados na tela, você tem um tempo limitado para conseguir acertar todas as teclas, essa sequência irá aparecer 5 vezes, após a quinta vez acertando você ganha, caso o contrário, você perde!</p>
+<p>Desenvolvemos um sistema para treinar habilidades remotas, agilidade e reflexo, que também pode ser usada para o treinamento de um minigame de um servidor de GTA RP. O jogo consiste em você acertar uma série de letras, sendo elas: Q, W, E, A, S, D, que vão aparecer aleatoriamente dentro de quadrados na tela. Você tem um tempo limitado para conseguir acertar todas as teclas e essa sequência irá aparecer 5 vezes. Após a 5ª vez acertando você ganha, caso contrário, você perde!</p>
 
-### 🎲 Abrindo o Jogo
+<br>
 
-[Para jogar é só clicar aqui!](https://eipastel.github.io/jogo-das-teclas/)
+### 🎮 [Jogar](https://eipastel.github.io/jogo-das-teclas/)
 
-
-
-### 🎲 Baixando o Jogo
-
-### Pré-requisitos
+### 🌀 Clonar o repositório
+## Pré-requisitos
 Antes de baixar, você precisa ter instalado seguinte ferramenta em sua máquina:
 [Git](https://git-scm.com)
-
 ```
+# Selecione a pasta do seu computador que você deseja clonar
+$ cd [diretório]
+
 # Clone este repositório
 $ git clone https://github.com/eipastel/jogo-das-teclas.git
 
-# Pronto, está no seu computador todos os arquivos do projeto!
+# Pronto, agora todos os arquivos do projeto estão no seu computador!
 ```
 
-### O jogo está em constante alteração, possíveis bug poderão ser alertados para nós!
+<br>
+
+<p>O jogo está em constante alteração, possíveis bug poderão ser alertados para nós via LinkedIn!</p>
 
 ### 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Vegas PRO](https://www.vegascreativesoftware.com/br/vegas-pro/)
 - [Photoshop](https://www.adobe.com/br/creativecloud/plans.html)
+
+<br>
 
 <div align="center"> 
 <img src="https://user-images.githubusercontent.com/92560005/234739952-5cef24f8-d19a-4fd6-ab5c-24a8592dd342.png" width="600"/>
@@ -39,6 +41,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </div>
 
 <br>
+
 <p align="center">
 <a target="_blank" href="https://www.linkedin.com/in/thiago-diogo-79857526a/">Thiago Diogo</a> • <a target="_blank" href="https://www.linkedin.com/in/emanuellyvalenga/">Emanuelly Valenga</a>
 </p>
