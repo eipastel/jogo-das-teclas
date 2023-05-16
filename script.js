@@ -18,6 +18,13 @@ window.addEventListener('keydown', eventoApertarTecla)
 botaoDeInicio.addEventListener('click', iniciarPararJogo)
 
 
+window.addEventListener('keydown', event => {
+    if (event.code === 'Space') {
+        iniciarPararJogo()
+    }
+})
+
+
 // Tempo e sequência do desafio e do usuário
 const tempoDesafio = 6 // Está em segundos.
 const letras = ['Q', 'W', 'E', 'A', 'S', 'D']
@@ -40,9 +47,11 @@ function tempoBarraProgresso() {
     limpaIntervalo = setInterval(() => {
         if (barraAtual < 0) {
             tentativas = 1
+            containerDesafio.style.display = 'none'
+            resultadoNegativo.style.display = 'grid'
             estaIniciado = false
             botaoDeInicio.classList = 'botao_de_inicio';
-            botaoDeInicio.textContent = 'Começar';
+            botaoDeInicio.textContent = 'Pressione ESPAÇO para iniciar';
             barraAtual = 100
             atualSequencia.length = 0
             inputUsuario.length = 0
@@ -90,7 +99,7 @@ function pegarSequencia() {
 function iniciarPararJogo() {
     estaIniciado = !estaIniciado
     botaoDeInicio.classList = (estaIniciado) ? 'botao_de_parar' : 'botao_de_inicio'
-    botaoDeInicio.textContent = (estaIniciado) ? 'Parar' :  'Começar'
+    botaoDeInicio.textContent = (estaIniciado) ? 'Pressione ESPAÇO para recomeçar' :  'Pressione ESPAÇO para iniciar'
 
     if (estaIniciado) {
         resultadoNegativo.style.display = 'none'
@@ -124,7 +133,7 @@ function iniciarPararJogo() {
     if (inputUsuario.length === 10 && tentativas == tentativasLimite) {
             estaIniciado = false
             botaoDeInicio.classList = 'botao_de_inicio';
-            botaoDeInicio.textContent = 'Começar';
+            botaoDeInicio.textContent = 'Pressione ESPAÇO para iniciar';
             barraAtual = 100
             atualSequencia.length = 0
             inputUsuario.length = 0
@@ -196,7 +205,7 @@ function eventoApertarTecla(event) {
                 letrasGeradas.forEach(key => key.classList.remove('tecla_digitada'))
                 reiniciarJogo()
                 botaoDeInicio.classList = 'botao_de_inicio'
-                botaoDeInicio.textContent = 'Começar'
+                botaoDeInicio.textContent = 'Pressione ESPAÇO para iniciar'
             }  
         } else {
             teclaErrada.currentTime = 0;

@@ -124,8 +124,8 @@ body {
 }
 
 .botao_de_inicio {
-    width: 11.5rem;
     height: 3.5rem;
+    padding: 0 15px;
     border-radius: 1rem;
     border: none;
     outline: none;
@@ -141,8 +141,8 @@ body {
 }
 
 .botao_de_parar {
-    width: 11.5rem;
     height: 3.5rem;
+    padding: 0 15px;
     border-radius: 1rem;
     border: none;
     outline: none;
