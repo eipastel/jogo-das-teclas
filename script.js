@@ -10,8 +10,8 @@ const tentativasTela = document.querySelector('.tentativas')
 // Efeitos sonoros e volumes.
 const teclaErrada = new Audio('./sons/som_de_erro.mp3')
 const teclaPressionada = new Audio('./sons/som_do_botao.mp3')
-teclaErrada.volume = 0.8
-teclaPressionada.volume = 0.5
+teclaErrada.volume = 0.2
+teclaPressionada.volume = 0.3
 
 // Eventos de click e apertar tecla
 window.addEventListener('keydown', eventoApertarTecla)
@@ -59,7 +59,7 @@ function tempoBarraProgresso() {
             letrasGeradas.forEach((key, index) => {
                 key.textContent = ''
             })
-            tentativasTela.textContent = `${tentativas}/5`
+            tentativasTela.textContent = `${tentativas}/${tentativasLimite}`
             reiniciarJogo()
         }
         
@@ -74,7 +74,7 @@ function tempoBarraProgresso() {
         }
 
         // Fazer a barra descer
-        barraAtual = barraAtual - 1.3;
+        barraAtual = barraAtual - 0.8;
         
         // Diminuir visualmente o tamanho da barra
         barraProgresso.style.width = `${barraAtual}%`
@@ -109,6 +109,7 @@ function iniciarPararJogo() {
         reiniciarJogo()
         tempoBarraProgresso()
         letrasGeradas[0].classList.add('tecla_atual')
+        tentativasTela.textContent = `${tentativas}/${tentativasLimite}`
 
         // Completar as letras aleatórias
         letrasGeradas.forEach((key, index) => {
