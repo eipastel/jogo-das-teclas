@@ -15,8 +15,6 @@ teclaPressionada.volume = 0.3
 
 // Eventos de click e apertar tecla
 window.addEventListener('keydown', eventoApertarTecla)
-botaoDeInicio.addEventListener('click', iniciarPararJogo)
-
 
 window.addEventListener('keydown', event => {
     if (event.code === 'Space') {
@@ -25,7 +23,8 @@ window.addEventListener('keydown', event => {
 })
 
 // Tempo e sequência do desafio e do usuário
-const tempoDesafio = 6 // Está em segundos.
+
+const tempoDesafio = 6
 const letras = ['Q', 'W', 'E', 'A', 'S', 'D']
 const atualSequencia = []
 const inputUsuario = []
