@@ -8,8 +8,8 @@ const barraProgresso = document.querySelector('.barra_atual')
 const tentativasTela = document.querySelector('.tentativas')
 
 // Efeitos sonoros e volumes.
-const teclaErrada = new Audio('../sounds/som_de_erro.mp3')
-const teclaPressionada = new Audio('../sounds/som_do_botao.mp3')
+const teclaErrada = new Audio('../assets/sounds/som_de_erro.mp3')
+const teclaPressionada = new Audio('../assets/sounds/som_do_botao.mp3')
 teclaErrada.volume = 0.2
 teclaPressionada.volume = 0.3
 
@@ -23,7 +23,6 @@ window.addEventListener('keydown', event => {
 })
 
 // Tempo e sequência do desafio e do usuário
-
 const tempoDesafio = 6
 const letras = ['Q', 'W', 'E', 'A', 'S', 'D']
 const atualSequencia = []
@@ -97,7 +96,7 @@ function pegarSequencia() {
 function iniciarPararJogo() {
     estaIniciado = !estaIniciado
     botaoDeInicio.classList = (estaIniciado) ? 'botao_de_parar' : 'botao_de_inicio'
-    botaoDeInicio.textContent = (estaIniciado) ? 'Pressione ESPAÇO para recomeçar' :  'Pressione ESPAÇO para iniciar'
+    botaoDeInicio.textContent = (estaIniciado) ? 'Pressione ESPAÇO para parar' :  'Pressione ESPAÇO para iniciar'
 
     if (estaIniciado) {
         resultadoNegativo.style.display = 'none'
