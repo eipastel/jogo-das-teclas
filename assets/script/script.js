@@ -8,8 +8,8 @@ const barraProgresso = document.querySelector('.barra_atual')
 const tentativasTela = document.querySelector('.tentativas')
 
 // Efeitos sonoros e volumes.
-const teclaErrada = new Audio('./sons/som_de_erro.mp3')
-const teclaPressionada = new Audio('./sons/som_do_botao.mp3')
+const teclaErrada = new Audio('../sounds/som_de_erro.mp3')
+const teclaPressionada = new Audio('../sounds/som_do_botao.mp3')
 teclaErrada.volume = 0.2
 teclaPressionada.volume = 0.3
 
@@ -23,7 +23,6 @@ window.addEventListener('keydown', event => {
         iniciarPararJogo()
     }
 })
-
 
 // Tempo e sequência do desafio e do usuário
 const tempoDesafio = 6 // Está em segundos.

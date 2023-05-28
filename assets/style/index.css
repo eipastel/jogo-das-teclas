@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 
 *,
 *::after,
@@ -13,7 +13,12 @@ html {
 }
 
 body {
-    background: linear-gradient(115deg, #194583, #1a79a1);
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -26,11 +31,14 @@ body {
     width: 60rem;
     height: 15rem;
     margin-top: 8rem;
-    border: 1px solid black;
-    backdrop-filter: blur(15px);
     border-radius: 1.5rem;
     display: grid;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.644);
 }
 
 .titulo {
@@ -38,12 +46,12 @@ body {
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-weight: bold;
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
     text-align: center;
-    border-bottom: 1px solid black;
-    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.644);
+    text-transform: uppercase;
 }
 
 .container_jogo {
@@ -82,39 +90,42 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Monomaniac One', sans-serif;
     aspect-ratio: 1;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid black;
-    backdrop-filter: blur(5px);
-
-    font-size: 2em;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.644);
+    font-size: 2.3em;
+    color: white;
 }
 
 .tecla_atual {
     position: relative;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     bottom: 0.8rem;
 }
 
 .tecla_digitada {
-    background-color: rgba(0, 0, 0, 0.125);
-    color: black;
-    opacity: 0.3;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: white;
+    opacity: 0.5;
 }
 
 .tentativas {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 1rem;
+    margin: auto;
     color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    letter-spacing: 2px;
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
 }
 
 .botao_de_inicio {
@@ -124,11 +135,16 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
-    background-color: #2fd12f;
-    transition: .4s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.644);
+    transition: .2s;
 }
 
 .botao_de_inicio:hover {
@@ -142,10 +158,16 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
+    color: white;
 
-    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
-    background-color: #b83131;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    font-family: 'Poppins', sans-serif;
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.644);
     transition: .4s;
 }
 
@@ -153,16 +175,9 @@ body {
     font-size: 1.55rem;
 }
 
-.resultado_negativo {
+.resultado_negativo, .resultado_positivo {
     display: none;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-size: 2.8rem;
-}
-
-.resultado_positivo {
-    display: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
     font-size: 2.8rem;
 }
@@ -200,18 +215,21 @@ a:hover {
 }
 
 .links_gerais img:hover {
-    background: #104261;
+    transform: scale(1.2);
 }
 
 .devs {
     width: 10rem;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.125);
-    border-radius: 1rem;
-    border: 0.5px solid black;
     display: inline-block;
     margin-left: 15px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.644);
 }
 
 .devs h4 {
